@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/normalize.css" />
+		<link rel="stylesheet" href="../styles/main.css" />
+		<title>Sales Tax</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title">Sales Tax Calculator</h1>
+			<nav>
+				<ul class="nav">
+					<li><a href="../index.html">Home</a></li>
+					<li>
+						<a href="index.html">Sales Calulator</a>
+					</li>
+					<li>
+						<a href="../change_maker/index.html"
+							>Change Calculator</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="inputContainer">
+				<fieldset>
+					<legend>Enter SubTotal and Tax Rate</legend>
+					<div class="form-control">
+						<label for="subTotal"> Subtotal:</label>
+						<input type="text" id="subTotal" />
+					</div>
+					<div class="form-control">
+						<label for="taxRate"> Tax Rate:</label>
+						<input type="text" id="taxRate" />
+					</div>
+					<div class="form-control">
+						<label for="salesTax"> Sales Tax:</label>
+						<input type="text" id="salesTax" disabled />
+					</div>
+					<div class="form-control">
+						<label for="total"> Total:</label>
+						<input type="text" id="total" disabled />
+					</div>
+					<input type="button" id="calculate" value="Calculate" />
+					<input type="button" id="clear" value="Clear" />
+				</fieldset>
+			</section>
+		</main>
+		<script src="../js/sales.js"></script>
+	</body>
+</html>
