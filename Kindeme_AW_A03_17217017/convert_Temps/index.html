@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/normalize.css" />
+		<link rel="stylesheet" href="../styles/main.css" />
+		<title>Convert Temperatures</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title">Convert Fahrenheit to Celsius</h1>
+			<nav>
+				<ul class="nav">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="index.html">Temperatures</a></li>
+					<li><a href="../grades/index.html">Grades</a></li>
+					<li><a href="../sales/index.html">Sales</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<form action="../convert_Temps/index.html" method="post">
+				<div>
+					<input
+						type="radio"
+						id="to_celsius"
+						name="selectedChoice"
+						value="celsius"
+						checked
+					/>
+					<label for="to_celsius">Fahrenheit to Celsius </label>
+				</div>
+				<div>
+					<input
+						type="radio"
+						id="to_fahrenheit"
+						name="selectedChoice"
+						value="farenheit"
+					/>
+					<label for="to_fahrenheit"> Celsius to Fahrenheit</label>
+				</div>
+				<div>
+					<label for="degree_label_1">Enter F degrees </label>
+					<input
+						type="text"
+						id="degree_label_1"
+						name="conversion"
+						checked
+					/>
+					<span id="message"></span>
+				</div>
+				<div>
+					<label for="degree_label_2">Degree Celsius </label>
+					<input
+						type="text"
+						id="degree_label_2"
+						name="tempConversion"
+						disabled
+					/>
+				</div>
+				<input type="submit" id="convert" value="Convert" />
+			</form>
+			<script src="../js/temperature.js"></script>
+		</main>
+	</body>
+</html>
