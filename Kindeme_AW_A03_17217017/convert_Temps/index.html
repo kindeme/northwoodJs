@@ -26,7 +26,7 @@
 					<input
 						type="radio"
 						id="to_celsius"
-						name="selectedChoice"
+						name="convert_Type"
 						value="celsius"
 						checked
 					/>
@@ -36,33 +36,27 @@
 					<input
 						type="radio"
 						id="to_fahrenheit"
-						name="selectedChoice"
+						name="convert_Type"
 						value="farenheit"
 					/>
 					<label for="to_fahrenheit"> Celsius to Fahrenheit</label>
 				</div>
 				<div>
-					<label for="degree_label_1">Enter F degrees </label>
-					<input
-						type="text"
-						id="degree_label_1"
-						name="conversion"
-						checked
-					/>
-					<span id="message"></span>
+					<label for="degrees_entered" id="degree_label_1"
+						>Enter F degrees
+					</label>
+					<input type="text" id="degrees_entered" checked />
 				</div>
 				<div>
-					<label for="degree_label_2">Degree Celsius </label>
-					<input
-						type="text"
-						id="degree_label_2"
-						name="tempConversion"
-						disabled
-					/>
+					<label for="degrees_computed" id="degree_label_2"
+						>Degree Celsius
+					</label>
+					<input type="text" id="degrees_computed" disabled />
 				</div>
 				<input type="submit" id="convert" value="Convert" />
+				<p id="message" class="message"></p>
 			</form>
-			<script src="../js/temperature.js"></script>
 		</main>
+		<script src="../js/temperature.js"></script>
 	</body>
 </html>

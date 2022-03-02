@@ -158,3 +158,6 @@ li {
 	background: var(--primary-300);
 	color: var(--grey-200);
 }
+.message {
+	text-align: center;
+}

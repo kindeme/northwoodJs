@@ -1,23 +1,15 @@
-// In your JavaScript file, I recommend the following function expressions:
-// toCelsius
-// toFahrenheit
-// clearTextBoxes
-// convertTemp
-// In your document.addEventListener()
-// when the to_celsius radio button is clicked, then call toCelsius function expression
-// when the to_fahrenheit radio button is clicked, then call toFahrenheit
-// In both toCelsius and toFahrenheit function expression, you need to use the .textCcontent properties to dynamically change the text of the labels.
+"use strict";
 
 const $ = (selector) => document.querySelector(selector);
 
-const celsiusConvertion = $("#to_celsius");
-const fahrenheitConvertion = $("#to_fahrenheit");
-const input = $("#degree_label_1");
-const result = $("#degree_label_2");
-const message = $("#message");
+// const celsiusConvertion = $("#to_celsius");
+// const fahrenheitConvertion = $("#to_fahrenheit");
+// const input = $("#degree_label_1");
+// const result = $("#degree_label_2");
+// const message = $("#message");
 let convertResult = 0;
 let inputValue = 0;
-let isValid = true;
+// let isValid = true;
 
 const calculateClesius = (fahrenheitValue) => {
 	return ((fahrenheitValue - 32) * 5) / 9;
@@ -26,58 +18,53 @@ const calculateClesius = (fahrenheitValue) => {
 const calculateFahrenheit = (celsiusValue) => {
 	return (celsiusValue * 9) / 5 + 32;
 };
-if (fahrenheitConvertion.checked) {
-	toFahrenheit();
-} else {
-	toCelsius();
-}
 
 const toCelsius = () => {
 	clearTextBoxes();
-	input.parentNode.firstChild.textContent = "Enter F degrees";
-	result.parentNode.firstChild.textContent = "Degree Celsius";
-	input.focus();
+	$("#degree_label_1").textContent = "Enter F degrees";
+	$("#degree_label_2").textContent = "Degree Celsius";
+	$("#degrees_entered").focus();
 };
 
 const toFahrenheit = () => {
 	clearTextBoxes();
-	input.parentNode.firstChild.textContent = "Enter C degrees";
-	result.parentNode.firstChild.textContent = "Degree Fahrenheit";
-	input.focus();
+	$("#degree_label_1").textContent = "Enter C degrees";
+	$("#degree_label_2").textContent = "Degree Fahrenheit";
+	$("#degrees_entered").focus();
 };
 const clearTextBoxes = () => {
-	input.value = "";
-	result.value = "";
-	input.parentNode.firstChild.textContent = "";
+	$("#degrees_entered").value = "";
+	$("#degrees_computed").value = "";
+	$("#degree_label_1").textContent = "";
+	$("#degree_label_2").textContent = "";
 };
 
 const convertTemp = (e) => {
 	e.preventDefault();
-	if (celsiusConvertion.checked) {
-		//toCelsius();
-		inputValue = input.value;
+	if ($("#to_celsius").checked) {
+		inputValue = $("#degrees_entered").value;
 		if (inputValue == "") {
-			message.textContent = "This field is require";
+			$("#message").textContent = "This field is require";
 		} else {
-			convertResult = calculateClesius(parseFloat(inputValue)).tofixed(0);
-			result.textContent = convertResult;
+			inputValue = parseFloat($("#degrees_entered").value);
+
+			convertResult = calculateClesius(inputValue).toFixed(0);
+			$("#degrees_computed").value = convertResult;
 		}
-	} else if (fahrenheitConvertion.checked) {
-		//toFahrenheit();
-		inputValue = input.value;
+	} else if ($("#to_fahrenheit").checked) {
+		inputValue = $("#degrees_entered").value;
 		if (inputValue == "") {
-			message.textContent = "This field is require";
+			$("#message").textContent = "This field is require";
 		} else {
-			convertResult = calculateFahrenheit(parseFloat(inputValue)).tofixed(
-				0
-			);
-			result.textContent = convertResult;
+			inputValue = parseFloat($("#degrees_entered").value);
+			convertResult = calculateFahrenheit(inputValue).toFixed(0);
+			$("#degrees_computed").value = convertResult;
 		}
 	}
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-	$("#to_celsius").addEventListener("Change", toCelsius);
-	$("#to_fahrenheit").addEventListener("Change", toFahrenheit);
+	$("#to_celsius").addEventListener("click", toCelsius);
+	$("#to_fahrenheit").addEventListener("click", toFahrenheit);
 	$("#convert").addEventListener("click", convertTemp);
 });
