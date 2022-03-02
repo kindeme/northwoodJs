@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/normalize.css" />
+		<link rel="stylesheet" href="../styles/main.css" />
+		<title>Change Calculator</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title">Change Calculator</h1>
+			<nav>
+				<ul class="nav">
+					<li><a href="../index.html">Home</a></li>
+					<li>
+						<a href="../sales_tax/index.html">Sales Calculator</a>
+					</li>
+					<li><a href="index.html">Change Calculator</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="inputContainer">
+				<div class="amountInput">
+					<label for="change"
+						>Enter amount of change due (1-99)</label
+					>
+					<input type="text" id="change" />
+					<input
+						type="button"
+						class="amountButton"
+						id="calculate"
+						value="Calculate"
+					/>
+				</div>
+				<fieldset>
+					<legend>Change Distribution</legend>
+					<div class="form-control">
+						<label for="quarters"> Quarter:</label>
+						<input type="text" id="quarters" disabled />
+					</div>
+					<div class="form-control">
+						<label for="dimes"> Dimes:</label>
+						<input type="text" id="dimes" disabled />
+					</div>
+					<div class="form-control">
+						<label for="nickels"> Nickels:</label>
+						<input type="text" id="nickels" disabled />
+					</div>
+					<div class="form-control">
+						<label for="pennies">Pennies:</label>
+						<input type="text" id="pennies" disabled />
+					</div>
+				</fieldset>
+			</section>
+		</main>
+		<script src="../js/change.js"></script>
+	</body>
+</html>
