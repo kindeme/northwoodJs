@@ -6,24 +6,59 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../styles/normalize.css" />
 		<link rel="stylesheet" href="../styles/main.css" />
-		<title>Grade Conversion</title>
+		<title>Test scores</title>
+		<!-- <script type="text/javascript">
+			jQuery(() => {
+				jQuery("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
+			});
+		</script> -->
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="title">Show Letter Grade</h1>
-			<nav>
+			<h1 class="title">Use a Test Score Array</h1>
+			<nav id="mobile_menu"></nav>
+			<nav id="nav_menu">
 				<ul class="nav">
 					<li><a href="../index.html">Home</a></li>
 					<li>
-						<a href="../temperatures/index.html">Temperatures</a>
+						<a href="../convert_Temps/index.html">Temperatures</a>
 					</li>
-					<li><a href="index.html">Grades</a></li>
-					<li><a href="../sales/index.html">Sales</a></li>
+					<li><a href="index.html">Test Scores</a></li>
+					<li><a href="../clock_stopwatch/">Stopwatch</a></li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-			<script src="../js/grade.js"></script>
+			<form action="index.html" method="post" class="scores">
+				<div>
+					<label for="name"> Name: </label>
+					<input type="text" id="name" />
+				</div>
+
+				<div>
+					<label for="score">Score: </label>
+					<input type="text" id="score" />
+				</div>
+				<div>
+					<button type="button" id="addToArray">Add to Array</button>
+				</div>
+				<div>
+					<button type="button" id="displayResults">
+						Display Results
+					</button>
+				</div>
+				<div>
+					<button type="button" id="displayScores">
+						Display Scores
+					</button>
+				</div>
+				<p id="errorMessage"></p>
+			</form>
+
+			<div id="result" class="result"></div>
+			<div id="scores" class="scores"></div>
 		</main>
+		<!-- <script src="../js/jquery.slicknav.min.js"></script> -->
+		<script src="../js/scores.js"></script>
 	</body>
 </html>

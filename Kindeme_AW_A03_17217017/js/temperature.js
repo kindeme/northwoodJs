@@ -1,15 +1,8 @@
 "use strict";
 
 const $ = (selector) => document.querySelector(selector);
-
-// const celsiusConvertion = $("#to_celsius");
-// const fahrenheitConvertion = $("#to_fahrenheit");
-// const input = $("#degree_label_1");
-// const result = $("#degree_label_2");
-// const message = $("#message");
 let convertResult = 0;
 let inputValue = 0;
-// let isValid = true;
 
 const calculateClesius = (fahrenheitValue) => {
 	return ((fahrenheitValue - 32) * 5) / 9;
@@ -44,7 +37,8 @@ const convertTemp = (e) => {
 	if ($("#to_celsius").checked) {
 		inputValue = $("#degrees_entered").value;
 		if (inputValue == "") {
-			$("#message").textContent = "This field is require";
+			$("#message").textContent =
+				"You must enter a valid number for degrees";
 		} else {
 			inputValue = parseFloat($("#degrees_entered").value);
 
@@ -54,7 +48,8 @@ const convertTemp = (e) => {
 	} else if ($("#to_fahrenheit").checked) {
 		inputValue = $("#degrees_entered").value;
 		if (inputValue == "") {
-			$("#message").textContent = "This field is require";
+			$("#message").textContent =
+				"You must enter a valid number for degrees";
 		} else {
 			inputValue = parseFloat($("#degrees_entered").value);
 			convertResult = calculateFahrenheit(inputValue).toFixed(0);
@@ -67,4 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	$("#to_celsius").addEventListener("click", toCelsius);
 	$("#to_fahrenheit").addEventListener("click", toFahrenheit);
 	$("#convert").addEventListener("click", convertTemp);
+	$("#degrees_entered").addEventListener("click", () => {
+		$("#degrees_entered").value = "";
+		$("#degrees_computed").value = "";
+	});
 });

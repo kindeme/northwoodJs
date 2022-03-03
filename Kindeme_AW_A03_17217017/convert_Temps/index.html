@@ -7,21 +7,27 @@
 		<link rel="stylesheet" href="../styles/normalize.css" />
 		<link rel="stylesheet" href="../styles/main.css" />
 		<title>Convert Temperatures</title>
+		<!-- <script type="text/javascript">
+			jQuery(() => {
+				jQuery("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
+			});
+		</script> -->
 	</head>
 	<body>
 		<header class="header">
 			<h1 class="title">Convert Fahrenheit to Celsius</h1>
-			<nav>
+			<nav id="mobile_menu"></nav>
+			<nav id="nav_menu">
 				<ul class="nav">
 					<li><a href="../index.html">Home</a></li>
 					<li><a href="index.html">Temperatures</a></li>
-					<li><a href="../grades/index.html">Grades</a></li>
-					<li><a href="../sales/index.html">Sales</a></li>
+					<li><a href="../test_scores/index.html">Test Scores</a></li>
+					<li><a href="../clock_stopwatch/">Stopwatch</a></li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-			<form action="../convert_Temps/index.html" method="post">
+			<form action="index.html" method="post">
 				<div>
 					<input
 						type="radio"
@@ -45,7 +51,7 @@
 					<label for="degrees_entered" id="degree_label_1"
 						>Enter F degrees
 					</label>
-					<input type="text" id="degrees_entered" checked />
+					<input type="text" id="degrees_entered" />
 				</div>
 				<div>
 					<label for="degrees_computed" id="degree_label_2"
@@ -57,6 +63,7 @@
 				<p id="message" class="message"></p>
 			</form>
 		</main>
+		<script src="../js/jquery.slicknav.min.js"></script>
 		<script src="../js/temperature.js"></script>
 	</body>
 </html>
