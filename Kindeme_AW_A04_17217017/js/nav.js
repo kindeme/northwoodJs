@@ -1,4 +1,7 @@
 "use strict";
 $(document).ready(() => {
-	$("#nav-toggle").click((evt) => {});
+	$("#nav-toggle").click((evt) => {
+		$("#nav").toggleClass("open");
+		evt.preventDefault();
+	});
 });

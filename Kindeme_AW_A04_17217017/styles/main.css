@@ -157,9 +157,14 @@ main {
 ul {
 	list-style-type: none;
 	padding: 0;
+	height: 0;
+	overflow: hidden;
+}
+.open {
+	height: 155px;
 }
 .nav a {
-	display: inline-block;
+	/* display: inline-block; */
 	color: var(--primary-900);
 	font-size: 1.2rem;
 	font-weight: 600;
@@ -170,6 +175,27 @@ ul {
 .nav li:hover {
 	background: var(--primary-300);
 	color: var(--grey-200);
+}
+
+/* collapse_ expand */
+.collapse_expand h1 {
+	font-size: 2rem;
+}
+.collapse_expand h2 {
+	font-size: 1.7rem;
+}
+.collapse_expand h3,
+.collapse_expand p {
+	font-size: 1.1rem;
+}
+.collapse_expand h3 a {
+	display: inline-block;
+	padding: 0;
+	color: var(--primary-800);
+	transition: 5s all;
+}
+.collapse_expand a:hover {
+	color: var(--red);
 }
 @media screen and (min-width: 800px) {
 	.header h1 {
@@ -184,6 +210,7 @@ ul {
 		flex-wrap: wrap;
 		justify-content: space-around;
 		background: var(--primary-600);
+		height: auto;
 	}
 	.nav a {
 		display: inline-block;
