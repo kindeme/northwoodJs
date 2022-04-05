@@ -85,7 +85,9 @@ h4 {
 h5 {
 	font-size: 1.25rem;
 }
-
+img {
+	width: 100%;
+}
 small,
 .text-small {
 	font-size: 0.8rem;
@@ -154,7 +156,13 @@ main {
 	box-shadow: var(--shadow-2);
 }
 
-ul {
+.nav-toggle {
+	font-size: 1.7rem;
+	border: none;
+	background: transparent;
+	color: var(--primary-700);
+}
+.nav {
 	list-style-type: none;
 	padding: 0;
 	height: 0;
@@ -169,6 +177,7 @@ ul {
 	font-size: 1.2rem;
 	font-weight: 600;
 }
+
 .nav li {
 	transition: 0.5s all;
 }
@@ -178,6 +187,13 @@ ul {
 }
 
 /* collapse_ expand */
+.collapse_expand section {
+	padding-inline: 1rem;
+	margin-bottom: 2rem;
+}
+#book_description {
+	margin-top: 1rem;
+}
 .collapse_expand h1 {
 	font-size: 2rem;
 }
@@ -188,14 +204,44 @@ ul {
 .collapse_expand p {
 	font-size: 1.1rem;
 }
-.collapse_expand h3 a {
-	display: inline-block;
-	padding: 0;
-	color: var(--primary-800);
-	transition: 5s all;
+.collapse_expand h3 {
+	color: var(--primary-700);
+	transition: 2s all;
+	text-transform: capitalize;
+	cursor: pointer;
 }
-.collapse_expand a:hover {
+
+.collapse_expand h3:hover {
 	color: var(--red);
+}
+.collapse_expand section h3 a {
+	display: block;
+	margin: 0;
+}
+.collapse_expand section h3 a:hover,
+.collapse_expand section h3 a:active,
+.collapse_expand section h3 a:focus {
+	color: var(--red);
+}
+.hide {
+	display: none;
+}
+#image_list {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#image_list li {
+	padding-right: 1rem;
+}
+.swap {
+	padding-inline: 2rem;
+	text-align: center;
+}
+
+#main_image {
+	max-height: 500px;
 }
 @media screen and (min-width: 800px) {
 	.header h1 {
@@ -204,7 +250,6 @@ ul {
 	header button {
 		display: none;
 	}
-
 	.nav {
 		display: flex;
 		flex-wrap: wrap;
@@ -219,11 +264,4 @@ ul {
 		padding: 0.3em 3rem;
 		font-weight: 600;
 	}
-	/* .nav li {
-		transition: 0.5s all;
-	}
-	.nav li:hover {
-		background: var(--primary-300);
-		color: var(--grey-200);
-	} */
 }
