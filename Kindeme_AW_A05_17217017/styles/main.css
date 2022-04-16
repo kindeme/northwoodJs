@@ -244,6 +244,51 @@ main {
 #main_image {
 	max-height: 500px;
 }
+
+/* ========================
+form
+   ======================= */
+form {
+	/* text-align: center; */
+}
+fieldset {
+	padding: 1em;
+	border: 2px solid var(--primary-600);
+	box-shadow: var(--shadow-1);
+	margin-bottom: 1rem;
+	transition: 0.5s all;
+	max-width: 70vw;
+	margin-inline: auto;
+	text-align: left;
+}
+fieldset:hover {
+	box-shadow: var(--shadow-2);
+}
+#room_type,
+#bed_type {
+	display: inline-block;
+}
+#room_type input,
+#bed_type input {
+	padding-left: 0.4rem;
+}
+
+label {
+	display: inline-block;
+	text-align: left;
+	width: 50%;
+}
+
+input [type="submit"] {
+	background: var(--primary-600);
+	color: white;
+	font-weight: bold;
+}
+form span {
+	color: red;
+	display: inline-block;
+	margin-left: 0.3rem;
+}
 @media screen and (min-width: 800px) {
 	.header h1 {
 		border-bottom: 0;
@@ -264,5 +309,16 @@ main {
 		font-size: 1.2rem;
 		padding: 0.3em 3rem;
 		font-weight: 600;
+	}
+	fieldset {
+		max-width: 40vw;
+	}
+	label {
+		display: inline-block;
+
+		text-align: right;
+
+		width: 25%;
+		margin-right: 1em;
 	}
 }
