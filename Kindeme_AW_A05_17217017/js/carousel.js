@@ -5,14 +5,16 @@ $(document).ready(() => {
 		evt.preventDefault();
 	});
 
-	$("#collapse_expand h3").click((evt) => {
-		evt.preventDefault();
-		const h3 = evt.currentTarget;
-		$(h3).prev().toggleClass("hide");
-		if ($(h3).prev().attr("class") == "hide") {
-			$(h3).text("show More");
-		} else {
-			$(h3).text("show less");
-		}
+	$("#slider").bxSlider({
+		auto: true,
+		autoControls: true,
+		// stopAutoOnClick: true,
+		pager: true,
+		slideWidth: 600,
+		captions: true,
+		slideMargin: 10,
+		minSlide: 2,
+		maxSlide: 2,
+		pagerType: "short",
 	});
 });

@@ -9,27 +9,62 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="../styles/normalize.css" />
+		<link rel="stylesheet" href="jquery.bxslider.css" />
 		<link rel="stylesheet" href="../styles/main.css" />
-		<title>About Us</title>
+
+		<title>Image Carousel</title>
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="title">About us</h1>
+			<h1 class="title">Image Carousel</h1>
 			<button class="nav-toggle" id="nav-toggle">
 				<i class="fa-solid fa-bars"></i>
 			</button>
 			<ul class="nav" id="nav">
 				<li><a href="../index.html">Home</a></li>
-				<li>
-					<a href="../form_Validation/index.html">Walk through</a>
-				</li>
+
 				<li><a href="../Reservations/index.html">Reservation</a></li>
 				<li><a href="index.html">Image Carousel</a></li>
 			</ul>
 		</header>
-		<main></main>
+		<main>
+			<h1 class="carousel_title">It is all about the horse</h1>
+			<ul id="slider" class="slider">
+				<li>
+					<img
+						src="images/building_01.jpg"
+						alt=""
+						title="Easy Jump"
+					/>
+				</li>
+				<li>
+					<img
+						src="images/building_02.jpg"
+						alt=""
+						title="Over the hurdle"
+					/>
+				</li>
+				<li>
+					<img src="images/building_03.jpg" alt="" title="Faster" />
+				</li>
+				<li>
+					<img
+						src="images/building_04.jpg"
+						alt=""
+						title="Rearing Up"
+					/>
+				</li>
+				<li>
+					<img
+						src="images/building_05.jpg"
+						alt=""
+						title="Ditch the rider"
+					/>
+				</li>
+			</ul>
+		</main>
 		<script src="../js/jquery-3.6.0.min.js"></script>
-		<!-- <script src="../js/nav.js"></script> -->
+		<script src="../js/jquery.bxslider.min.js"></script>
 		<script src="../js/carousel.js"></script>
 	</body>
 </html>
