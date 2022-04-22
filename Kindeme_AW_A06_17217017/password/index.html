@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
+
+		<link rel="stylesheet" href="../styles/normalize.css" />
+		<link
+			rel="stylesheet"
+			href="../js/jquery-ui-1.12.1.custom/jquery-ui.min.css"
+		/>
+		<link rel="stylesheet" href="../styles/main.css" />
+		<title>Generate password</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title">Generate a strong password</h1>
+			<button class="nav-toggle" id="nav-toggle">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+			<ul class="nav" id="nav">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="index.html">Password Generator</a></li>
+				<li>
+					<a href="../purchase_record/index.html">Purchase Record</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<form
+				action="#"
+				method="get"
+				name="password_form"
+				id="password_form"
+				class="password_form`"
+			>
+				<div>
+					<label for="password_length">Password Length: </label>
+					<input
+						type="number"
+						id="password_length"
+						name="password_length"
+						min="8"
+						max="20"
+					/>
+				</div>
+				<div>
+					<label></label>
+					<input
+						type="submit"
+						value="Get Password"
+						id="submit_password"
+						class="submit_password"
+					/>
+				</div>
+				<div>
+					<label></label>
+					<input
+						type="reset"
+						value="Clear"
+						id="reset_password"
+						class="reset_password"
+					/>
+				</div>
+
+				<div>
+					<label for="contact_name">Generated password: </label>
+					<input
+						type="text"
+						id="generated_pass"
+						name="generated_pass"
+						readonly
+					/>
+				</div>
+			</form>
+		</main>
+		<script src="../js/jquery-3.6.0.min.js"></script>
+		<!-- <script src="../js/nav.js"></script> -->
+		<script src="../js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+		<script src="../js/generate_pass.js"></script>
+	</body>
+</html>
