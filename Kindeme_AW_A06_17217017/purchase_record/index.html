@@ -9,14 +9,18 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="../styles/normalize.css" />
-		<link rel="stylesheet" href="jquery.bxslider.css" />
+		<link
+			rel="stylesheet"
+			href="../js/jquery-ui-1.12.1.custom/jquery-ui.min.css"
+		/>
+
 		<link rel="stylesheet" href="../styles/main.css" />
 
-		<title>Image Carousel</title>
+		<title>Purchase Record</title>
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="title">Image Carousel</h1>
+			<h1 class="title">Purchase Record</h1>
 			<button class="nav-toggle" id="nav-toggle">
 				<i class="fa-solid fa-bars"></i>
 			</button>
@@ -29,9 +33,68 @@
 				</li>
 			</ul>
 		</header>
-		<main></main>
+		<main>
+			<form name="purchase_form" id="purchase_form">
+				<div>
+					<label for="email">Email: </label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="name@email.com"
+					/>
+					<span id="message">*</span>
+				</div>
+				<div>
+					<label for="date">Purchase date: </label>
+					<input type="text" id="date" name="date" readonly />
+					<span id="message">*</span>
+				</div>
+
+				<div>
+					<label for="discount">Type of Discount: </label>
+					<select id="discount" name="discount">
+						<option value="none">None</option>
+						<option value="military">Military</option>
+						<option value="student">Student</option>
+						<option value="aarp">AARP</option>
+					</select>
+				</div>
+				<div>
+					<label for="purchase_amount">Purchase Amount: </label>
+					<input
+						type="text"
+						id="purchase_amount"
+						name="purchase_amount"
+						required
+					/>
+					<span id="message">*</span>
+				</div>
+				<div>
+					<label></label>
+					<input
+						type="submit"
+						value="Process Information"
+						id="calculate"
+					/>
+				</div>
+				<div>
+					<label></label>
+					<input type="reset" value="Clear" id="clear" />
+				</div>
+				<div>
+					<label for="discounted_price">Discounted price: </label>
+					<input
+						type="text"
+						id="discounted_price"
+						name="discounted_price"
+						readonly
+					/>
+				</div>
+			</form>
+		</main>
 		<script src="../js/jquery-3.6.0.min.js"></script>
-		<script src="../js/jquery.bxslider.min.js"></script>
+		<script src="../js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 		<script src="../js/purchase_record.js"></script>
 	</body>
 </html>

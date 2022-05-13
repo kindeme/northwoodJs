@@ -93,6 +93,16 @@ $(document).ready((e) => {
 		}
 		$("#phone").val(phone);
 
+		const getRoomType = () => {
+			return $("input[name=room]:checked").val();
+		};
+
+		const getBedType = () => {
+			return $("input[name=bed]:checked").val();
+		};
+		const getCheckin = () => {
+			return $("#checkin").is(":checked");
+		};
 		// prevent the submission
 		if (!isValid) {
 			if (generalError == true) {
@@ -103,13 +113,17 @@ $(document).ready((e) => {
 			event.preventDefault();
 		} else {
 			const reservation = [];
-			// reservation.push(["arrivalDate", arrivalDate]);
-			// reservation.push(["night", nights]);
+
 			reservation.push(["contact_name", name]);
 			reservation.push(["contact_name", email]);
 			reservation.push(["phone", phone]);
+			reservation.push(["arrival_Date", arrivalDate]);
+			reservation.push(["night", nights]);
+			reservation.push(["room_type", getRoomType()]);
+			reservation.push(["bed_type", getBedType()]);
+			reservation.push(["checkin", getCheckin()]);
 		}
-		console.log(reservation);
+
 		sessionStorage.reservation = JSON.stringify(reservation);
 	});
 });

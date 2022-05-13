@@ -251,6 +251,15 @@ main {
 .bx-wrapper {
 	margin-inline: auto;
 }
+
+.display_profile {
+	max-width: 60%;
+	padding: 2rem;
+	margin-inline: auto;
+}
+.pbtn {
+	margin-left: 3rem;
+}
 /* ========================
 form
    ======================= */
@@ -354,5 +363,8 @@ form span {
 	input[type="button"] {
 		margin-right: 0.8rem;
 		margin-bottom: 0;
+	}
+	.pbtn {
+		margin-left: 5rem;
 	}
 }
